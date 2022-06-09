@@ -1,3 +1,5 @@
+// 二分查找
+
 function binarySearch(list: number[], item: number) {
     let low = 0;
     let high = list.length - 1;
