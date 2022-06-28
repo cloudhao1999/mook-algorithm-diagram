@@ -1,0 +1,26 @@
+{
+  "name": "algorithm_diagram",
+  "version": "1.0.0",
+  "description": "<h1>算法图解同步配套习题</h1>",
+  "main": "index.js",
+  "scripts": {
+    "test": "yarn jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cloudhao1999/algorithm_diagram.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cloudhao1999/algorithm_diagram/issues"
+  },
+  "homepage": "https://github.com/cloudhao1999/algorithm_diagram#readme",
+  "devDependencies": {
+    "@types/jest": "^28.1.3",
+    "jest": "^28.1.1",
+    "ts-jest": "^28.0.5",
+    "typescript": "^4.7.4"
+  }
+}
