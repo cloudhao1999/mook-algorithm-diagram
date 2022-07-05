@@ -19,3 +19,13 @@ let range = {
 for (let num of range) {
     console.log('num',num)
 }
+
+let str = "Hello"
+
+let iterator = str[Symbol.iterator]();
+
+while(true) {
+    let result = iterator.next()
+    if (result.done) break;
+    console.log(result.value)
+}
