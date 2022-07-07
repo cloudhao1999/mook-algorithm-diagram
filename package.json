@@ -4,7 +4,7 @@
   "description": "<h1>算法图解同步配套习题</h1>",
   "main": "index.js",
   "scripts": {
-    "test": "yarn jest 00前端真题/第二节/08binary-search-tree.test.ts"
+    "test": "yarn jest 00前端真题/第二节/10move-zero.test.ts"
   },
   "repository": {
     "type": "git",
