@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Loop</title>
+</head>
+<body>
+    <p>Event Loop</p>
+
+    <script>
+        console.log("start")
+        setTimeout(() => {
+            console.log("setTimeout")
+        }, 0)
+        Promise.resolve().then(() => {
+            console.log("Promise.resolve")
+        })
+        console.log("end")
+
+        // 先微后宏 微任务队列在DOM渲染前，宏任务在DOM渲染后
+
+        // 宏任务 MarcoTask Queue
+        // 队列
+        // () => {
+        //     console.log("setTimeout")
+        // }
+        // 微任务 MicroTask Queue
+        // 队列
+        // () => {
+        //     console.log("Promise.resolve")
+        // }
+
+        // const p = document.createElement("p")
+        // p.innerText = "new paragraph"
+        // document.body.appendChild(p)
+        // const list = document.getElementsByTagName("p")
+        // console.log('list', list.length)
+
+        // console.log("start")
+
+        // // 渲染之后
+        // setTimeout(() => {
+        //     const list = document.getElementsByTagName("p")
+        //     console.log('list timeout', list.length)
+        //     alert('阻塞 setTimeout')
+        // }, 0)
+
+        // // 渲染之前
+        // Promise.resolve().then(() => {
+        //     const list = document.getElementsByTagName("p")
+        //     console.log('list promise', list.length)
+        //     alert('阻塞 Promise.resolve')
+        // })
+
+        // console.log("end")
+
+    </script>
+</body>
+</html>
