@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for vs forEach</title>
+  </head>
+  <body>
+    <p>for vs forEach</p>
+
+    <script>
+      // for 更快
+      // forEach 每次都要创建一个函数来调用，而 for 不会创建函数
+      // 函数需要独立的作用域，会有额外的开销
+      const arr = [];
+      for (let i = 0; i < 100 * 10000; i++) {
+        arr.push(i);
+      }
+      const length = arr.length;
+
+      console.time("for");
+      let n1 = 0;
+      for (let i = 0; i < length; i++) {
+        n1++;
+      }
+      console.timeEnd("for"); // 1.692138671875 ms
+
+      console.time("forEach");
+      let n2 = 0;
+      arr.forEach((item) => {
+        n2++;
+      });
+      console.timeEnd("forEach"); // 7.10205078125 ms
+    </script>
+  </body>
+</html>
