@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>requestIdleCallback</title>
+</head>
+<body>
+    <p>requestIdleCallback</p>
+
+    <script>
+        window.onload = () => {
+            console.log('start')
+            // 都是宏任务，在DOM渲染完成后才开始执行
+            setTimeout(() => {
+                console.log('setTimeout')
+            })
+            // 高优先级，每次帧渲染都会触发
+            requestAnimationFrame(() => {
+                console.log('requestAnimationFrame')
+            })
+            // 低优先级，只有在空闲时才会触发
+            requestIdleCallback(() => {
+                console.log('requestIdleCallback')
+            })
+            console.log('end')
+        }
+    </script>
+</body>
+</html>
