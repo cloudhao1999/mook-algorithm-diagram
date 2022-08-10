@@ -4,7 +4,7 @@
   "description": "<h1>算法图解同步配套习题</h1>",
   "main": "index.js",
   "scripts": {
-    "test": "yarn jest 00前端真题/第三节/15switch-letter-case.test.ts"
+    "test": "yarn jest 00前端真题/第八节/03new.test.js"
   },
   "repository": {
     "type": "git",
