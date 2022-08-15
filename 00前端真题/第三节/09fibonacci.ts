@@ -14,7 +14,7 @@
 // }
 
 /**
- * 斐波那契数列（递归）
+ * 斐波那契数列（for循环）
  * @param n 数列的第n项
  */
 export function fibonacci(n: number): number {
